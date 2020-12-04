@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          It is <code>{new Date().toLocaleTimeString()}</code>
+          Hello, {props.name}! It is <code>{new Date().toLocaleTimeString()}</code>
         </p>
       </header>
     </div>
