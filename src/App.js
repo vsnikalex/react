@@ -6,9 +6,8 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {props.name}! It is <code>{new Date().toLocaleTimeString()}</code>
-        </p>
+          <h1>Hello, {props.name}!</h1>
+          <h2>It is <code>{props.date.toLocaleTimeString()}</code></h2>
       </header>
     </div>
   );

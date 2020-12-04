@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 function tick() {
     ReactDOM.render(
         <React.StrictMode>
-            <App name={"Vasilii"}/>
+            <App name={"Vasili"} date={new Date()}/>
         </React.StrictMode>,
         document.getElementById('root')
     );
