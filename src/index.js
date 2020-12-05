@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Toggle from './Toggle';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
         <App name={"Stepan"}/>
+        <Toggle />
     </React.StrictMode>,
     document.getElementById('root')
 );
