@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Toggle from './Toggle';
 
 class App extends React.Component {
     constructor(props) {
@@ -34,6 +35,7 @@ class App extends React.Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1>Hello, {this.props.name}!</h1>
                     <h2>It is <code>{this.state.date.toLocaleTimeString()}</code></h2>
+                    <Toggle />
                 </header>
             </div>
         );
