@@ -5,6 +5,9 @@ import {ProgressBar, Step} from "react-step-progress-bar";
 class OrderProgressBar extends React.Component {
     constructor(props) {
         super(props);
+
+        // TODO: mapping statusName => progressBar index to identify failed stages
+
         // set initial state in constructor
         this.state = {
             completion: 0,
