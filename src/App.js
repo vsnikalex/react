@@ -47,6 +47,8 @@ class App extends React.Component {
             button = <LoginButton onClick={this.handleLoginClick} />;
         }
 
+        const numbers = [1, 2, 3, 4, 5];
+
         return (
             <div className="App">
                 <header className="App-header">
@@ -55,7 +57,12 @@ class App extends React.Component {
                         <Greeting isLoggedIn={isLoggedIn} name={this.props.name}/>
                         {button}
                     </div>
-                    <h2>It is <code>{this.state.date.toLocaleTimeString()}</code></h2>
+                    <div>
+                        <h2>It is <code>{this.state.date.toLocaleTimeString()}</code></h2>
+                    </div>
+                    <div>
+                        <NumberList numbers={numbers} />
+                    </div>
                 </header>
             </div>
         );
@@ -91,6 +98,18 @@ function LogoutButton(props) {
         <button onClick={props.onClick}>
             Logout
         </button>
+    );
+}
+
+function NumberList(props) {
+    const numbers = props.numbers;
+    const listItems = numbers.map((number) =>
+        <li key={number.toString()}>
+            {number}
+        </li>
+    );
+    return (
+        <ul>{listItems}</ul>
     );
 }
 
