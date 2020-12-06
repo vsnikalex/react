@@ -2,7 +2,7 @@ import React from "react";
 import "react-step-progress-bar/styles.css";
 import {ProgressBar, Step} from "react-step-progress-bar";
 
-class OrderState extends React.Component {
+class OrderProgressBar extends React.Component {
     constructor(props) {
         super(props);
         // set initial state in constructor
@@ -13,9 +13,6 @@ class OrderState extends React.Component {
     }
 
     componentDidMount() {
-        // TODO: use OrderId to subscribe on SSE with
-        //  Stage Notifications
-        //  { stage: [Customer, Kitchen, Payment], success: boolean }
         this.timerID = setInterval(
             () => this.nextStage(),
             1000
@@ -94,4 +91,4 @@ class OrderState extends React.Component {
     }
 }
 
-export default OrderState;
+export default OrderProgressBar;
