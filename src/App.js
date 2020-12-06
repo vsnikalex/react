@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Toggle from './Toggle';
 
 class App extends React.Component {
     constructor(props) {
@@ -57,7 +56,6 @@ class App extends React.Component {
                         {button}
                     </div>
                     <h2>It is <code>{this.state.date.toLocaleTimeString()}</code></h2>
-                    <Toggle />
                 </header>
             </div>
         );
