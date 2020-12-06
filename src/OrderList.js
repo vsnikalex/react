@@ -18,7 +18,7 @@ function OrderList() {
                 </li>
                 <li className="media">
                     <div className="media-body">
-                        <div className="media-heading">Vasilii</div>
+                        <div className="media-heading">Stepan</div>
                         <div className="media-hint">Customer Verified</div>
                     </div>
                 </li>
