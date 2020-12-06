@@ -13,6 +13,9 @@ class OrderState extends React.Component {
     }
 
     componentDidMount() {
+        // TODO: use OrderId to subscribe on SSE with
+        //  Stage Notifications
+        //  { stage: [Customer, Kitchen, Payment], success: boolean }
         this.timerID = setInterval(
             () => this.nextStage(),
             1000
