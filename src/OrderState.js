@@ -7,7 +7,8 @@ class OrderState extends React.Component {
         super(props);
         // set initial state in constructor
         this.state = {
-            completion: 0
+            completion: 0,
+            failedStage: null
         };
     }
 
@@ -20,9 +21,12 @@ class OrderState extends React.Component {
 
     nextStage() {
         // on an event, update state with setState()
-        this.setState((state) => ({
-            completion: state.completion < 100 ? (state.completion + 25) : 0
-        }));
+        if (!this.state.failedStage) {
+            this.setState((state) => ({
+                completion: state.completion < 100 ? (state.completion + 25) : 0,
+                failedStage: (state.completion + 25) === 50 ? 2 : null
+            }));
+        }
     }
 
     render() {
@@ -33,47 +37,52 @@ class OrderState extends React.Component {
                 hasStepZero={true}
             >
                 <Step transition="scale">
-                    {({accomplished}) => (
+                    {({accomplished, index}) => (
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851"
+                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
+                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
                         />
                     )}
                 </Step>
                 <Step transition="scale">
-                    {({accomplished}) => (
+                    {({accomplished, index}) => (
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851"
+                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
+                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
                         />
                     )}
                 </Step>
                 <Step transition="scale">
-                    {({accomplished}) => (
+                    {({accomplished, index}) => (
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/97/Pikachu_%28Smiling%29.png/revision/latest?cb=20170410234508"
+                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
+                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
                         />
                     )}
                 </Step>
                 <Step transition="scale">
-                    {({accomplished}) => (
+                    {({accomplished, index}) => (
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/97/Pikachu_%28Smiling%29.png/revision/latest?cb=20170410234508"
+                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
+                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
                         />
                     )}
                 </Step>
                 <Step transition="scale">
-                    {({accomplished}) => (
+                    {({accomplished, index}) => (
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851"
+                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
+                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
                         />
                     )}
                 </Step>
