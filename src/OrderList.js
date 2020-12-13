@@ -28,13 +28,15 @@ class OrderList extends React.Component {
     render() {
         console.log('List of orders: ', this.state.orders)
 
+        let orderComponents = this.state.orders.map((o) =>
+            <Order key={o.id} order={o}/>
+        )
+
         return (
-            // TODO: subscribe on SSE about new Orders,
-            //  append new order each time
             <div className="container-fixed">
                 <h1 className="underline">Orders</h1>
                 <ul className="content-list">
-                    <Order order={{"customer": "Vasilii"}}/>
+                    {orderComponents}
                 </ul>
             </div>
         );

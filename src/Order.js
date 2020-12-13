@@ -7,7 +7,7 @@ class Order extends React.Component {
             // TODO: use OrderId to subscribe on SSE with
             //  Stage Notifications
             //  { stage: [Customer, Kitchen, Payment], success: boolean }
-            //  refresh BasicInfo and OrderState
+            //  refresh BasicInfo and OrderProgressBar
             <div className="container-fixed">
                 <ul className="content-list">
                     <div>
@@ -26,7 +26,7 @@ class Order extends React.Component {
 
 function BasicInfo(props) {
     return <div className="media-body">
-                <div className="media-heading">{props.customer}</div>
+                <div className="media-heading">{props.customer.name}</div>
                 <div className="media-hint">{props.stage}</div>
             </div>;
 }
