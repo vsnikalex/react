@@ -33,6 +33,8 @@ class OrderProgressBar extends React.Component {
     }
 
     render() {
+        const failIcon = "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png";
+
         return (
             <ProgressBar
                 percent={this.state.completion}
@@ -44,8 +46,8 @@ class OrderProgressBar extends React.Component {
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
-                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
+                            src={(index !== this.state.failedStage) ? "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/12452524521579156634-512.png" :
+                                failIcon}
                         />
                     )}
                 </Step>
@@ -54,8 +56,8 @@ class OrderProgressBar extends React.Component {
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
-                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
+                            src={(index !== this.state.failedStage) ? "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/1037445041581065986-512.png" :
+                                failIcon}
                         />
                     )}
                 </Step>
@@ -64,8 +66,8 @@ class OrderProgressBar extends React.Component {
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
-                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
+                            src={(index !== this.state.failedStage) ? "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/12599184281553508380-512.png" :
+                                failIcon}
                         />
                     )}
                 </Step>
@@ -74,8 +76,8 @@ class OrderProgressBar extends React.Component {
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
-                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
+                            src={(index !== this.state.failedStage) ? "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/9554909541606428216-512.png" :
+                                failIcon}
                         />
                     )}
                 </Step>
@@ -84,8 +86,8 @@ class OrderProgressBar extends React.Component {
                         <img
                             style={{filter: `grayscale(${accomplished ? 0 : 80}%)`}}
                             width="30"
-                            src={(index !== this.state.failedStage) ? "https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851" :
-                                "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/16618812301557740370-512.png"}
+                            src={(index !== this.state.failedStage) ? "https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/2445356421579060773-512.png" :
+                                failIcon}
                         />
                     )}
                 </Step>
