@@ -4,15 +4,11 @@ import OrderProgressBar from "./OrderProgressBar";
 class Order extends React.Component {
     render() {
         return (
-            // TODO: use OrderId to subscribe on SSE with
-            //  Stage Notifications
-            //  { stage: [Customer, Kitchen, Payment], success: boolean }
-            //  refresh BasicInfo and OrderProgressBar
             <div className="container-fixed">
                 <ul className="content-list">
                     <div>
                         <li className="media">
-                            <BasicInfo customer={this.props.order.customer} stage={"Order Accepted"}/>
+                            <BasicInfo customer={this.props.order.customer} stage={this.props.stage}/>
                         </li>
                         <li className="content-list-item">
                             <OrderProgressBar />
@@ -27,7 +23,7 @@ class Order extends React.Component {
 function BasicInfo(props) {
     return <div className="media-body">
                 <div className="media-heading">{props.customer.name}</div>
-                <div className="media-hint">{props.stage}</div>
+                <div className="media-hint">{props.stage === undefined ? 'Order Accepted' : props.stage.state}</div>
             </div>;
 }
 
